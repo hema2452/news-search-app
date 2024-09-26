@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:rgba(45, 92, 123,0.9);
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    width:100vw;   
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+    padding:20px 10px;
+    background-color: #1b4f72;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+    
+}
+
+.nav-bar h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color:white;
+    font-weight: 800;
+    padding:10px;
+}
+
+#search{
+    padding:10px;
+    height:20px;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 8px;
+    
+}
+
+.nav-bar button{
+    padding:8px 10px;
+    border-radius:10px;
+    border:none;
+    outline:0;
+    cursor:pointer;
+    
+}
+
+.placeholder-card{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:40px;
+  margin-top:20px;
+  place-items: center;
+}
+
+.card{
+    max-width: 350px;
+    height:400px;    
+    border:none;
+    border-radius:15px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.4);
+    overflow: hidden;
+    place-self: center;  
+    background-color: white;
+}
+
+.card img{
+    width: 350px;
+    height:200px;
+}
+
+.card h1{
+    font-size: 28px;
+    padding:10px 5px;
+}
+.card p{
+    font-size: 16px;
+    padding:10px;
+}
+@media screen and (max-width:1050px) {
+    .placeholder-card{
+        grid-template-columns: 1fr 1fr 1fr;    
+    }    
+}
+
+@media screen and (max-width:800px) {
+    .placeholder-card{
+        grid-template-columns: 1fr 1fr;
+               
+    }  
+    .nav-bar{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .placeholder-card{
+        grid-template-columns: 1fr;
+    }
+    
+}
